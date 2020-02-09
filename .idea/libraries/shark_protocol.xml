@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="shark-protocol">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/shark-protocol.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
