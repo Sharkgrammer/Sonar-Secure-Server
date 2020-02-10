@@ -1,10 +1,13 @@
+package server;
+
 import crypto.CryptManager;
 import recieve.ServerHandler;
 import util.DataHolder;
+import util.temp;
 
-class server {
+import static server.utils.*;
 
-    private ServerHandler server ;
+public class mainServer {
 
     public void run(DataHolder s){
 
