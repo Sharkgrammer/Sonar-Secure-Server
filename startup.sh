@@ -3,7 +3,7 @@
 launch_daemon()
 {
   /bin/sh &lt;&lt;EOF
-     java -Ddaemon.pidfile=mydaemon.pid -cp src\ command.start < & - &
+     java -Ddaemon.pidfile=mydaemon.pid -cp src\ command.start < &- &
      pid=\$!
      echo \${pid}
 EOF
