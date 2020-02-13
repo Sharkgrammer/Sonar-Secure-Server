@@ -6,6 +6,8 @@ import org.apache.commons.daemon.DaemonContext;
 import org.apache.commons.daemon.DaemonInitException;
 import util.DataHolder;
 
+import java.util.Arrays;
+
 import static server.utils.logger;
 import static server.utils.server;
 
@@ -16,6 +18,8 @@ public class serverDaemon implements Daemon {
     @Override
     public void init(DaemonContext daemonContext) throws DaemonInitException, Exception {
         String[] args = daemonContext.getArguments();
+
+        System.out.println(Arrays.toString(args));
 
         main = new Thread(){
 
