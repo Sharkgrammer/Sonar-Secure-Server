@@ -1,10 +1,10 @@
 #! /bin/sh
 echo "Starting Sonar"
 
+current_path=$(pwd)
 jsvc_location="/usr/bin/jsvc"
 java_home="/usr/lib/jvm/default-java"
 jar_paths="$current_path/Sonar-Secure-Server.jar:$current_path/lib/commons-daemon-1.2.2.jar"
-current_path=$(pwd)
 
 name="SonarDaemon"
 desc="Sonar Daemon Service"
