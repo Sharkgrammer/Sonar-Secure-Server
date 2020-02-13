@@ -15,47 +15,18 @@ pid="/var/run/$name.pid"
 out="log/$name.out"
 err="err/$name.err"
 
+script="$jsvc_location -home $java_home -cp $jar_paths -user $user -outfile $out -errfile $err -pidfile $pid $1 $class $args"
 jsvc_exec()
 {
 $jsvc_location -home $java_home -cp $jar_paths -user $user -outfile $out -errfile $err -pidfile $pid $1 $class $args
 }
 
-case "$1" in
-start)
 echo "Starting the $desc..."
 
 # Start the service
 jsvc_exec
 
-echo "The $desc has started."
-;;
-stop)
-echo "Stopping the $desc..."
+echo "The $desc has started"
+echo $pid
+echo $script
 
-# Stop the service
-jsvc_exec "-stop"
-
-echo "The $desc has stopped."
-;;
-restart)
-if [ -f "$pid" ]; then
-
-echo "Restarting the $desc..."
-
-# Stop the service
-jsvc_exec "-stop"
-
-# Start the service
-jsvc_exec
-
-echo "The $desc has restarted."
-else
-echo "Daemon not running, no action taken"
-exit 1
-fi
-;;
-*)
-echo "Usage: /etc/init.d/$name {start|stop|restart}" >&2
-exit 3
-;;
-esac
