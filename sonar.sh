@@ -18,9 +18,7 @@ err="$current_path/log/$name.err"
 
 jsvc_exec()
 {
-	script="$jsvc_location -home $java_home -cp $jar_paths -user $user -outfile $out -errfile $err -pidfile $pid $1 $class $args"
-	echo $script
-	
+	script="$jsvc_location -home $java_home -cp $jar_paths -user $user -outfile $out -errfile $err -pidfile $pid $1 $class $args"	
 	sudo $script
 }
 
