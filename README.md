@@ -20,3 +20,9 @@ You can then use the `sonar.sh` script to talk to the server
 # Usage
 
     ./sonar.sh start|stop|restart 
+    
+# Information
+    
+Error messages are located in log/SonarDaemon.err
+
+Console messages are located in log/SonarDaemon.out
