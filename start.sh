@@ -4,7 +4,7 @@ echo "Starting Sonar"
 current_path=$(pwd)
 jsvc_location="/usr/bin/jsvc"
 java_home="/usr/lib/jvm/default-java"
-jar_paths="$current_path/Sonar-Secure-Server.jar:$current_path/libs/commons-daemon-1.2.2.jar"
+jar_paths="$current_path/Sonar-Secure-Server.jar:$current_path/libs/commons-daemon-1.2.2.jar:$current_path/libs/log4j-1.2.17.jar:$current_path/libs/shark-protocol.jar"
 
 name="SonarDaemon"
 desc="Sonar Daemon Service"
