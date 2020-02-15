@@ -18,8 +18,6 @@ public class serverDaemon implements Daemon {
     public void init(DaemonContext daemonContext) throws DaemonInitException, Exception {
         String[] args = daemonContext.getArguments();
 
-        System.out.println(Arrays.toString(args));
-
         IP = args[0];
 
         main = new Thread(){

@@ -33,10 +33,9 @@ public class mainServer {
         System.out.println();
 
         System.out.println();
-        System.out.println("My public key, its raw data and encoded in base64");
-        System.out.println(s.getManager().getPublicKey());
-        System.out.println(Arrays.toString(s.getManager().getPublicKey().getEncoded()));
+        System.out.println("My public key encoded in base64 and its raw bytes");
         System.out.println(new String(base64.toBase64(s.getManager().getPublicKey().getEncoded())));
+        System.out.println(Arrays.toString(s.getManager().getPublicKey().getEncoded()));
         System.out.println();
 
         System.out.println();
