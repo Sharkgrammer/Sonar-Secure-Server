@@ -1,12 +1,15 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="Sonar-Secure-Server:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/Sonar_Secure_Server_jar</output-path>
+    <output-path>$PROJECT_DIR$</output-path>
     <root id="archive" name="Sonar-Secure-Server.jar">
       <element id="module-output" name="Sonar-Secure-Server" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/commons-daemon-1.2.2-tests.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/commons-daemon-1.2.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/shark-protocol.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/libs/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="library" level="project" name="log4j-1.2.17" />
+      <element id="library" level="project" name="shark-protocol" />
+      <element id="library" level="project" name="commons-daemon-1.2.2-javadoc" />
     </root>
   </artifact>
 </component>
