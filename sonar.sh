@@ -1,4 +1,5 @@
 #! /bin/sh
+
 current_path=$(pwd)
 current_IP=$(curl ifconfig.me)
 jsvc_location="/usr/bin/jsvc"
