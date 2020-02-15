@@ -4,11 +4,11 @@ echo "Starting Sonar"
 current_path=$(pwd)
 jsvc_location="/usr/bin/jsvc"
 java_home="/usr/lib/jvm/default-java"
-jar_paths="$current_path/Sonar-Secure-Server.jar:$current_path/lib/commons-daemon-1.2.2.jar"
+jar_paths="$current_path/Sonar-Secure-Server.jar:$current_path/libs/commons-daemon-1.2.2.jar"
 
 name="SonarDaemon"
 desc="Sonar Daemon Service"
-class="server.serverDaemon"
+class="server.test"
 
 args="start"
 user="root"
@@ -18,9 +18,11 @@ err="$current_path/log/$name.err"
 
 script="$jsvc_location -home $java_home -cp $jar_paths -user $user -outfile $out -errfile $err -pidfile $pid $1 $class $args"
 
+echo $script
+
 jsvc_exec()
 {
-sudo $jsvc_location -home $java_home -cp $jar_paths -user $user -outfile $out -errfile $err -pidfile $pid $1 $class $args
+sudo $script
 }
 
 echo "Starting the $desc..."
