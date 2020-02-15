@@ -16,10 +16,11 @@ pid="/var/run/$name.pid"
 out="$current_path/log/$name.out"
 err="$current_path/log/$name.err"
 
-script="$jsvc_location -home $java_home -cp $jar_paths -user $user -outfile $out -errfile $err -pidfile $pid $1 $class $args"
-
 jsvc_exec()
 {
+	script="$jsvc_location -home $java_home -cp $jar_paths -user $user -outfile $out -errfile $err -pidfile $pid $1 $class $args"
+	echo $script
+	
 	sudo $script
 }
 
