@@ -1,6 +1,5 @@
 package server;
 
-import com.sun.org.slf4j.internal.LoggerFactory;
 import org.apache.commons.daemon.Daemon;
 import org.apache.commons.daemon.DaemonContext;
 import org.apache.commons.daemon.DaemonInitException;
@@ -40,7 +39,8 @@ public class serverDaemon implements Daemon {
 
     @Override
     public void start() throws Exception {
-        logger = LoggerFactory.getLogger(utils.class);
+        //logger = LoggerFactory.getLogger(utils.class);
+        System.out.println("START");
         try
         {
             DataHolder data = new DataHolder(null, null);
@@ -53,7 +53,9 @@ public class serverDaemon implements Daemon {
         }
         catch (Exception e)
         {
-            logger.error("Terminating due to Exception: ", e);
+            System.out.println(e.toString());
+            System.out.println(Arrays.toString(e.getStackTrace()));
+            //logger.error("Terminating due to Exception: ", e);
         }
 
     }
