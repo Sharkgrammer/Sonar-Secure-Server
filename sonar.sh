@@ -25,21 +25,21 @@ jsvc_exec()
 
 
 case $1 in
-	"start")
+	start)
 		echo "Starting the $desc..."
 
 		jsvc_exec
 
 		echo "The $desc has started, running on $current_IP:6000"
 	;;
-	"stop")
+	stop)
 		echo "Stopping the $desc..."
 
 		jsvc_exec "-stop"
 
 		echo "The $desc has stopped"
 	;;
-	"restart")
+	restart)
 		if [ -f $PID ]; then
 	
 			echo "Restarting the $desc..."
@@ -56,14 +56,14 @@ case $1 in
 			echo "The $desc has started, running on $current_IP:6000"
 		fi
 	;;
-	"data")
+	data)
 		echo "Outputting Sonar Server Data"
 
 		jsvc_exec "-data"
 
 		echo "Complete, please check the logs located at $out"
 	;;
-	"network")
+	network)
 		echo "Outputting Sonar Server Data"
 
 		jsvc_exec "-network"
