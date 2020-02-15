@@ -19,7 +19,7 @@ script="$jsvc_location -home $java_home -cp $jar_paths -user $user -outfile $out
 
 jsvc_exec()
 {
-$script
+	sudo $script
 }
 
 
