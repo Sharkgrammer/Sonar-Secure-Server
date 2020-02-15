@@ -11,7 +11,7 @@ name="SonarDaemon"
 desc="Sonar Daemon"
 class="server.serverDaemon"
 
-args="start"
+args="$current_IP"
 user=$(whoami)
 pid="/var/run/$name.pid"
 out="$current_path/log/$name.out"

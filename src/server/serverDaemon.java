@@ -7,18 +7,20 @@ import util.DataHolder;
 
 import java.util.Arrays;
 
-import static server.utils.logger;
 import static server.utils.server;
 
 public class serverDaemon implements Daemon {
 
     private Thread main;
+    private String IP;
 
     @Override
     public void init(DaemonContext daemonContext) throws DaemonInitException, Exception {
         String[] args = daemonContext.getArguments();
 
         System.out.println(Arrays.toString(args));
+
+        IP = args[0];
 
         main = new Thread(){
 
@@ -38,12 +40,12 @@ public class serverDaemon implements Daemon {
     }
 
     @Override
-    public void start() throws Exception {
-        //logger = LoggerFactory.getLogger(utils.class);
-        System.out.println("START");
+    public void start() {
+
         try
         {
             DataHolder data = new DataHolder(null, null);
+            data.setIP(IP);
             data.setPort(6000);
 
             mainServer tempServer = new mainServer();
@@ -55,7 +57,6 @@ public class serverDaemon implements Daemon {
         {
             System.out.println(e.toString());
             System.out.println(Arrays.toString(e.getStackTrace()));
-            //logger.error("Terminating due to Exception: ", e);
         }
 
     }
