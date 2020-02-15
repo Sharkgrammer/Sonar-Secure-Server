@@ -8,7 +8,7 @@ jar_paths="$current_path/Sonar-Secure-Server.jar:$current_path/libs/commons-daem
 
 name="SonarDaemon"
 desc="Sonar Daemon Service"
-class="server.test"
+class="server.serverDaemon"
 
 args="start"
 user="root"
