@@ -35,6 +35,5 @@ startStr="Data takes an average of "
 resultDec=$decryptionTime/$decryptionAmt
 resultData=$dataTime/$dataAmt
 
-
-echo "Data takes an average of " + $resultData + " milliseconds to process"
-echo "Data takes an average of " + $resultDec + " milliseconds to decrypt"
+echo $startStr + $resultData + " milliseconds to process"
+echo $startStr + $resultDec + " milliseconds to decrypt"
