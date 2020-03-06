@@ -5,16 +5,24 @@ import recieve.ServerHandler;
 import util.Base64Handler;
 import util.DataHolder;
 
+import java.security.PublicKey;
 import java.util.Arrays;
 
 import static server.utils.*;
 
 public class mainServer {
 
+    public static void main(String[] args){
+        DataHolder data = new DataHolder(null, null);
+        data.setIP("localhost");
+        data.setPort(6000);
+        new mainServer().run(data);
+    }
+
     public void run(DataHolder s){
 
         CryptManager manager = new CryptManager();
-        manager.setKeys((byte[]) null, null);
+        manager.setKeys((PublicKey) null, null);
         s.setManager(manager);
         s.setServer(true);
         Base64Handler base64 = s.getBase64();
