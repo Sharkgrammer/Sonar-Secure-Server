@@ -4,7 +4,6 @@ import crypto.CryptManager;
 import recieve.ServerHandler;
 import util.Base64Handler;
 import util.DataHolder;
-import util.temp;
 
 import java.util.Arrays;
 
@@ -14,10 +13,8 @@ public class mainServer {
 
     public void run(DataHolder s){
 
-        temp tempkey = new temp();
-
         CryptManager manager = new CryptManager();
-        manager.setKeys(tempkey.pukey1, tempkey.prkey1);
+        manager.setKeys((byte[]) null, null);
         s.setManager(manager);
         s.setServer(true);
         Base64Handler base64 = s.getBase64();
