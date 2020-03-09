@@ -9,6 +9,7 @@ import java.util.Arrays;
 
 import static server.utils.server;
 
+//REF http://www.neilson.co.za/creating-a-java-daemon-system-service-for-debian-using-apache-commons-jsvc/
 public class serverDaemon implements Daemon {
 
     private Thread main;

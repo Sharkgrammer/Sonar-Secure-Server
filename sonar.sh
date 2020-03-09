@@ -1,4 +1,5 @@
 #! /bin/sh
+#! //REF http://www.neilson.co.za/creating-a-java-daemon-system-service-for-debian-using-apache-commons-jsvc/
 
 current_path=$(pwd)
 current_IP=$(curl ifconfig.me)

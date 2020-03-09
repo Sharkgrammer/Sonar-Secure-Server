@@ -15,7 +15,7 @@ public class mainServer {
     public static void main(String[] args){
         DataHolder data = new DataHolder(null, null);
         data.setIP("localhost");
-        data.setPort(6000);
+        data.setPort(6002);
         new mainServer().run(data);
     }
 
